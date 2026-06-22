@@ -42,3 +42,37 @@ const observer = new IntersectionObserver((entries, observer) => {
 // Elements to animate
 const animatedElements = document.querySelectorAll('.slide-up')
 animatedElements.forEach(el => observer.observe(el))
+
+// Counter animation
+const counters = document.querySelectorAll('.stat-number')
+let hasCounted = false
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !hasCounted) {
+      hasCounted = true
+      counters.forEach(counter => {
+        const target = +counter.getAttribute('data-target')
+        const duration = 2000 // ms
+        const increment = target / (duration / 16) // 60fps
+        
+        let current = 0
+        const updateCounter = () => {
+          current += increment
+          if (current < target) {
+            counter.innerText = Math.ceil(current)
+            requestAnimationFrame(updateCounter)
+          } else {
+            counter.innerText = target
+          }
+        }
+        updateCounter()
+      })
+    }
+  })
+}, { threshold: 0.5 })
+
+const statsSection = document.querySelector('.stats')
+if (statsSection) {
+  counterObserver.observe(statsSection)
+}

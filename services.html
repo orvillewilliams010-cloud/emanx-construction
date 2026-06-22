@@ -27,51 +27,67 @@
     </header>
 
     <main>
-      <!-- Page Hero -->
-      <section class="page-hero" style="background-image: linear-gradient(rgba(15, 15, 15, 0.8), rgba(15, 15, 15, 0.9)), url('/services-hero.png');">
-        <div class="container text-center">
-          <h1 class="slide-up">OUR EXPERTISE</h1>
-          <p class="subtitle slide-up delay-1">Comprehensive Residential Solutions</p>
+      <!-- Sticky Services Layout -->
+      <section class="section-dark" style="padding: 12rem 2rem 8rem;">
+        <div class="container sticky-layout">
+          
+          <!-- Left: Sticky Sidebar -->
+          <div class="sticky-sidebar slide-up">
+            <p class="text-massive-outline" style="font-size: clamp(3rem, 6vw, 6rem);">OUR</p>
+            <p class="text-massive-outline" style="font-size: clamp(3rem, 6vw, 6rem);">EXPERTISE</p>
+            <p style="color: #ccc; font-size: 1.25rem; line-height: 1.8; margin-top: 3rem; max-width: 400px;">We bring unparalleled skill and precision to every project. From architectural framing to luxury interior finishes, we execute with absolute authority.</p>
+          </div>
+
+          <!-- Right: Scrolling Cards -->
+          <div class="reveal-cards">
+            
+            <div class="reveal-card slide-up delay-1">
+              <div class="reveal-card-bg" style="background-image: url('/services-hero.png');"></div>
+              <div class="reveal-card-content">
+                <h3>Custom Builds & Framing</h3>
+                <p>Flawless structural engineering from the ground up, utilizing premium timber and advanced construction methodologies.</p>
+              </div>
+            </div>
+            
+            <div class="reveal-card slide-up">
+              <div class="reveal-card-bg" style="background-image: url('/portfolio-1.png');"></div>
+              <div class="reveal-card-content">
+                <h3>Luxury Renovations</h3>
+                <p>Transforming outdated spaces into modern, high-end masterworks with seamless design integration.</p>
+              </div>
+            </div>
+            
+            <div class="reveal-card slide-up">
+              <div class="reveal-card-bg" style="background-image: url('/hero-bg.png');"></div>
+              <div class="reveal-card-content">
+                <h3>High-End Finishing</h3>
+                <p>Level 5 drywall taping, flawless custom millwork, and sophisticated plumbing and electrical installations.</p>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
-      <!-- Services Grid -->
-      <section class="staggered-content section-dark">
-        <div class="container">
-          
-          <div class="staggered-row slide-up">
-            <div class="staggered-text">
-              <span class="accent-text">01.</span>
-              <h2>Custom Home Builds</h2>
-              <p>From architectural planning to the final walkthrough, we manage every phase of your custom home build. Our elite project managers ensure flawless execution of framing, roofing, and structural integrity.</p>
+      <!-- The EMANX Guarantee -->
+      <section class="section-dark" style="padding: 4rem 2rem 8rem; background: #050505;">
+        <div class="container text-center slide-up">
+          <h2 style="font-size: 2.5rem; margin-bottom: 2rem; color: white;">The EMANX Guarantee</h2>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; text-align: left; max-width: 1000px; margin: 0 auto;">
+            <div>
+              <h4 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Transparent Pricing</h4>
+              <p style="color: #aaa;">No hidden fees. We provide detailed breakdowns for every material and labor hour.</p>
             </div>
-            <div class="staggered-image">
-              <img src="/services-hero.png" alt="Timber framing" class="shadow-lg" />
+            <div>
+              <h4 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Strict Timelines</h4>
+              <p style="color: #aaa;">We respect your time. Our project management ensures milestones are hit flawlessly.</p>
             </div>
-          </div>
-
-          <div class="staggered-row reverse slide-up">
-            <div class="staggered-text">
-              <span class="accent-text">02.</span>
-              <h2>Luxury Renovations</h2>
-              <p>We transform existing spaces into modern masterpieces. Whether it's a complete kitchen gut, a massive addition, or exterior siding upgrades, our renovations breathe premium life into your property.</p>
-            </div>
-            <div class="staggered-image">
-              <img src="/portfolio-1.png" alt="Kitchen renovation" class="shadow-lg" />
+            <div>
+              <h4 style="color: var(--color-primary); font-size: 1.25rem; margin-bottom: 0.5rem;">Elite Craftsmanship</h4>
+              <p style="color: #aaa;">We employ only the top 1% of tradesmen in Alberta. Quality is never compromised.</p>
             </div>
           </div>
-
-          <div class="staggered-row slide-up">
-            <div class="staggered-text">
-              <span class="accent-text">03.</span>
-              <h2>Interior Finishing</h2>
-              <p>The difference between a good house and a luxury estate is the finish. We specialize in high-end drywall, flawless taping, custom millwork, and advanced plumbing and electrical finishing.</p>
-            </div>
-            <div class="staggered-image">
-              <img src="/hero-bg.png" alt="Interior finishing" class="shadow-lg" />
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -79,7 +95,7 @@
       <section class="red-cta slide-up">
         <div class="container flex-cta">
           <h2>READY TO BUILD YOUR LEGACY?</h2>
-          <a href="/#contact" class="btn-outline">Start Your Project</a>
+          <a href="/#contact" class="btn-dark">Consult Our Experts</a>
         </div>
       </section>
     </main>

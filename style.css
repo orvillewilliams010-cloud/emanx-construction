@@ -623,6 +623,175 @@ h1, h2, h3, .brand-text {
   100% { opacity: 1; transform: translateY(0); }
 }
 
+/* =========================================
+   ULTRA-PREMIUM REDESIGN UTILITIES
+   ========================================= */
+
+/* Massive Text Outlines */
+.text-massive-outline {
+  font-size: clamp(4rem, 10vw, 10rem);
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.1);
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0;
+  transition: var(--transition);
+}
+
+.text-massive-outline:hover {
+  -webkit-text-stroke: 2px var(--color-primary);
+  color: rgba(230, 57, 70, 0.05);
+}
+
+/* Glass Methodology Grid */
+.methodology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.glass-card {
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 3rem;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  background: rgba(30, 10, 10, 0.5);
+  border-color: rgba(230, 57, 70, 0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.glass-card:hover::before {
+  transform: translateX(100%);
+}
+
+.step-number {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  color: var(--color-primary);
+  opacity: 0.2;
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  font-weight: 800;
+}
+
+/* Parallax Breakout */
+.parallax-breakout {
+  height: 70vh;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-overlay {
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+}
+
+/* Sticky Sidebar Layout for Services */
+.sticky-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.sticky-sidebar {
+  position: sticky;
+  top: 120px;
+}
+
+/* Hover-Reveal Service Cards */
+.reveal-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.reveal-card {
+  position: relative;
+  height: 400px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.reveal-card-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 1;
+}
+
+.reveal-card:hover .reveal-card-bg {
+  transform: scale(1.05);
+}
+
+.reveal-card-content {
+  position: relative;
+  z-index: 2;
+  background: linear-gradient(to top, rgba(15,15,15,1) 0%, rgba(15,15,15,0.8) 50%, transparent 100%);
+  width: 100%;
+  padding: 3rem 2rem 2rem;
+  transform: translateY(60%);
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.reveal-card:hover .reveal-card-content {
+  transform: translateY(0);
+}
+
+.reveal-card-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-light);
+}
+
+.reveal-card-content p {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  transition-delay: 0.1s;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.reveal-card:hover .reveal-card-content p {
+  opacity: 1;
+}
+
+/* Media Queries update for sticky */
 @media (max-width: 992px) {
   .hero-content { flex-direction: column; align-items: flex-start; justify-content: center; padding-top: 10rem; }
   .hero-glass-card { width: 100%; margin-top: 3rem; }
@@ -637,4 +806,10 @@ h1, h2, h3, .brand-text {
   .page-hero { padding: 8rem 2rem 4rem; }
   .page-hero h1 { font-size: 2.5rem; }
   .staggered-row, .staggered-row.reverse { flex-direction: column; gap: 2rem; margin-bottom: 4rem; }
+  
+  .sticky-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .sticky-sidebar { position: relative; top: 0; }
+  .text-massive-outline { -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2); }
+  .reveal-card-content { transform: translateY(0); background: rgba(15,15,15,0.85); }
+  .reveal-card-content p { opacity: 1; }
 }

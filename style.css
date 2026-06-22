@@ -628,4 +628,8 @@ h1, h2, h3, .brand-text {
   .flex-cta { flex-direction: column; text-align: center; gap: 2rem; }
   .navbar { padding: 1.5rem 2rem; }
   .nav-links { display: none; }
+  
+  .page-hero { padding: 8rem 2rem 4rem; }
+  .page-hero h1 { font-size: 2.5rem; }
+  .staggered-row, .staggered-row.reverse { flex-direction: column; gap: 2rem; margin-bottom: 4rem; }
 }

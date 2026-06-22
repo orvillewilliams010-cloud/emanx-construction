@@ -2,23 +2,32 @@ import './style.css'
 
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar')
+const heroBg = document.querySelector('.parallax-bg')
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
+  const scrollY = window.scrollY
+  
+  // Navbar Glassmorphism trigger
+  if (scrollY > 50) {
     navbar.classList.add('scrolled')
   } else {
     navbar.classList.remove('scrolled')
+  }
+
+  // Parallax effect on hero background
+  if (heroBg) {
+    heroBg.style.transform = `translateY(${scrollY * 0.4}px)`
   }
 })
 
 // Set dynamic year in footer
 document.getElementById('year').textContent = new Date().getFullYear()
 
-// Scroll animations
+// Scroll observer for animating elements into view
 const observerOptions = {
   root: null,
   rootMargin: '0px',
-  threshold: 0.1
+  threshold: 0.15
 }
 
 const observer = new IntersectionObserver((entries, observer) => {
@@ -31,5 +40,5 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, observerOptions)
 
 // Elements to animate
-const animatedElements = document.querySelectorAll('.fade-in, .slide-up')
+const animatedElements = document.querySelectorAll('.slide-up')
 animatedElements.forEach(el => observer.observe(el))

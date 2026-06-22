@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EMANX Construction | Premium Quality</title>
+    <title>EMANX Construction | Premium Residential</title>
     <!-- Google Fonts for typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,70 +13,74 @@
   <body>
     <div id="app">
       <!-- Navigation -->
-      <nav class="navbar">
+      <nav class="navbar glass-nav">
         <div class="logo">
-          <!-- Placeholder logo until uploaded -->
-          <span class="brand-text">EMANX</span>
+          <span class="brand-text text-reveal"><span>EMANX</span></span>
         </div>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact" class="btn-primary">Get a Quote</a></li>
+          <li class="stagger-1"><a href="#home">Home</a></li>
+          <li class="stagger-2"><a href="#about">About</a></li>
+          <li class="stagger-3"><a href="#services">Services</a></li>
+          <li class="stagger-4"><a href="#contact" class="btn-outline">Get a Quote</a></li>
         </ul>
       </nav>
 
-      <!-- Hero Section -->
-      <header id="home" class="hero section-dark">
-        <div class="hero-content fade-in">
-          <h1>BUILDING THE FUTURE,<br><span class="text-red">ONE BRICK AT A TIME.</span></h1>
-          <p>Premium craftsmanship meets unmatched reliability. EMANX Construction delivers excellence across every stage of your project.</p>
-          <a href="#services" class="btn-primary btn-large">Explore Our Services</a>
+      <!-- Asymmetrical Hero Section -->
+      <header id="home" class="hero">
+        <div class="hero-bg parallax-bg" style="background-image: url('/hero-bg.png');"></div>
+        <div class="hero-gradient-overlay"></div>
+        
+        <div class="hero-content">
+          <div class="hero-text-area">
+            <h1 class="hero-title">
+              <span class="text-reveal delay-1"><span>BUILDING</span></span><br>
+              <span class="text-reveal delay-2"><span>YOUR DREAM</span></span><br>
+              <span class="text-reveal delay-3"><span class="text-red">HOME.</span></span>
+            </h1>
+            <p class="hero-subtitle fade-in-up delay-4">Premium residential craftsmanship meets unmatched reliability. EMANX Construction delivers excellence across every stage of your custom home project.</p>
+          </div>
+          
+          <div class="hero-glass-card fade-in-up delay-5">
+            <h3>Start Your Project</h3>
+            <p>Consult with our residential experts today to bring your vision to life.</p>
+            <a href="#services" class="btn-primary btn-full">Explore Services</a>
+          </div>
         </div>
-        <div class="hero-overlay"></div>
       </header>
+
+      <!-- About Section -->
+      <section id="about" class="about section-dark">
+        <div class="container">
+          <div class="about-grid">
+            <div class="about-text slide-up">
+              <h2 class="section-title">The EMANX Standard</h2>
+              <p class="about-desc">We believe that a house is more than just a structure—it's a sanctuary. For over a decade, we have been crafting custom luxury homes and premium residential renovations that elevate everyday living.</p>
+              <ul class="about-features">
+                <li><span class="text-red">✓</span> Uncompromising Quality</li>
+                <li><span class="text-red">✓</span> Transparent Communication</li>
+                <li><span class="text-red">✓</span> Premium Materials</li>
+              </ul>
+            </div>
+            <div class="about-image slide-up delay-1">
+               <img src="/portfolio-1.png" alt="Luxury Residential Construction" class="rounded-img shadow-lg" />
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Services Section -->
       <section id="services" class="services">
         <div class="container">
-          <h2 class="section-title text-center fade-in">Our Expertise</h2>
-          <p class="section-subtitle text-center fade-in">Comprehensive construction solutions tailored to your premium needs.</p>
+          <h2 class="section-title text-center slide-up">Our Expertise</h2>
+          <p class="section-subtitle text-center slide-up">Comprehensive residential solutions tailored to your premium needs.</p>
           <div class="services-grid">
-            <!-- Services Cards -->
-            <div class="service-card slide-up">
-              <div class="service-icon">💧</div>
-              <h3>Plumbing</h3>
-              <p>Top-tier plumbing installations and maintenance.</p>
-            </div>
-            <div class="service-card slide-up" style="animation-delay: 0.1s;">
-              <div class="service-icon">⚡</div>
-              <h3>Electrical</h3>
-              <p>Safe, modern, and reliable electrical frameworks.</p>
-            </div>
-            <div class="service-card slide-up" style="animation-delay: 0.2s;">
-              <div class="service-icon">🏗️</div>
-              <h3>Framing</h3>
-              <p>Solid structural framing built to last generations.</p>
-            </div>
-            <div class="service-card slide-up" style="animation-delay: 0.3s;">
-              <div class="service-icon">🧱</div>
-              <h3>Drywall</h3>
-              <p>Flawless drywall installation with precision finish.</p>
-            </div>
-            <div class="service-card slide-up" style="animation-delay: 0.4s;">
-              <div class="service-icon">🖌️</div>
-              <h3>Taping</h3>
-              <p>Expert taping services ensuring perfectly smooth walls.</p>
-            </div>
-            <div class="service-card slide-up" style="animation-delay: 0.5s;">
-              <div class="service-icon">🏠</div>
-              <h3>Siding</h3>
-              <p>Durable and aesthetically pleasing exterior siding.</p>
-            </div>
-            <div class="service-card slide-up" style="animation-delay: 0.6s;">
-              <div class="service-icon">🔨</div>
-              <h3>Renovations</h3>
-              <p>Transforming existing spaces into modern masterpieces.</p>
-            </div>
+            <div class="service-card slide-up"><div class="service-icon">💧</div><h3>Plumbing</h3><p>Top-tier plumbing installations and maintenance.</p></div>
+            <div class="service-card slide-up" style="animation-delay: 0.1s;"><div class="service-icon">⚡</div><h3>Electrical</h3><p>Safe, modern, and reliable electrical frameworks.</p></div>
+            <div class="service-card slide-up" style="animation-delay: 0.2s;"><div class="service-icon">🏗️</div><h3>Framing</h3><p>Solid structural framing built to last generations.</p></div>
+            <div class="service-card slide-up" style="animation-delay: 0.3s;"><div class="service-icon">🧱</div><h3>Drywall</h3><p>Flawless drywall installation with precision finish.</p></div>
+            <div class="service-card slide-up" style="animation-delay: 0.4s;"><div class="service-icon">🖌️</div><h3>Taping</h3><p>Expert taping services ensuring perfectly smooth walls.</p></div>
+            <div class="service-card slide-up" style="animation-delay: 0.5s;"><div class="service-icon">🏠</div><h3>Siding</h3><p>Durable and aesthetically pleasing exterior siding.</p></div>
+            <div class="service-card slide-up" style="animation-delay: 0.6s;"><div class="service-icon">🔨</div><h3>Renovations</h3><p>Transforming existing spaces into modern residential masterpieces.</p></div>
           </div>
         </div>
       </section>
@@ -85,24 +89,18 @@
       <section id="contact" class="contact section-dark">
         <div class="container">
           <div class="contact-grid">
-            <div class="contact-info fade-in">
+            <div class="contact-info slide-up">
               <h2 class="section-title">Let's Build Together</h2>
-              <p>Ready to start your premium construction project with EMANX? Reach out today.</p>
+              <p>Ready to start your premium residential project with EMANX? Reach out today.</p>
               <ul class="contact-details">
                 <li>📞 (555) 123-4567</li>
                 <li>✉️ info@emanxconstruction.com</li>
               </ul>
             </div>
-            <form class="contact-form fade-in">
-              <div class="form-group">
-                <input type="text" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="Your Email" required>
-              </div>
-              <div class="form-group">
-                <textarea placeholder="Tell us about your project" rows="5" required></textarea>
-              </div>
+            <form class="contact-form slide-up delay-1">
+              <div class="form-group"><input type="text" placeholder="Your Name" required></div>
+              <div class="form-group"><input type="email" placeholder="Your Email" required></div>
+              <div class="form-group"><textarea placeholder="Tell us about your project" rows="5" required></textarea></div>
               <button type="submit" class="btn-primary btn-full">Send Message</button>
             </form>
           </div>
